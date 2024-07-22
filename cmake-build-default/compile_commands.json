@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/Temp/Game/cmake-build-default",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -pg -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\main.cpp.obj -c D:\\Temp\\Game\\main.cpp",
+  "file": "D:\\Temp\\Game\\main.cpp",
+  "output": "CMakeFiles\\Game.dir\\main.cpp.obj"
+}
+]
