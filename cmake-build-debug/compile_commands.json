@@ -1,8 +1,20 @@
 [
 {
   "directory": "D:/Temp/Game/cmake-build-debug",
-  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -pg -g -std=gnu++14 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\main.cpp.obj -c D:\\Temp\\Game\\main.cpp",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\main.cpp.obj -c D:\\Temp\\Game\\main.cpp",
   "file": "D:\\Temp\\Game\\main.cpp",
   "output": "CMakeFiles\\Game.dir\\main.cpp.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Scene.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Scene.cpp",
+  "file": "D:\\Temp\\Game\\Scene\\Engine\\Scene.cpp",
+  "output": "CMakeFiles\\Game.dir\\Scene\\Engine\\Scene.cpp.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Game.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Game.cpp",
+  "file": "D:\\Temp\\Game\\Scene\\Engine\\Game.cpp",
+  "output": "CMakeFiles\\Game.dir\\Scene\\Engine\\Game.cpp.obj"
 }
 ]

@@ -51,10 +51,24 @@ build cmake_object_order_depends_target_Game: phony || CMakeFiles/Game.dir
 
 build CMakeFiles/Game.dir/main.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/main.cpp || cmake_object_order_depends_target_Game
   DEP_FILE = CMakeFiles\Game.dir\main.cpp.obj.d
-  FLAGS = -pg -g -std=gnu++14 -fdiagnostics-color=always
+  FLAGS = -O0 -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
   OBJECT_DIR = CMakeFiles\Game.dir
   OBJECT_FILE_DIR = CMakeFiles\Game.dir
+
+build CMakeFiles/Game.dir/Scene/Engine/Scene.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/Scene/Engine/Scene.cpp || cmake_object_order_depends_target_Game
+  DEP_FILE = CMakeFiles\Game.dir\Scene\Engine\Scene.cpp.obj.d
+  FLAGS = -O0 -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
+  OBJECT_DIR = CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = CMakeFiles\Game.dir\Scene\Engine
+
+build CMakeFiles/Game.dir/Scene/Engine/Game.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/Scene/Engine/Game.cpp || cmake_object_order_depends_target_Game
+  DEP_FILE = CMakeFiles\Game.dir\Scene\Engine\Game.cpp.obj.d
+  FLAGS = -O0 -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
+  OBJECT_DIR = CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = CMakeFiles\Game.dir\Scene\Engine
 
 
 # =============================================================================
@@ -64,8 +78,8 @@ build CMakeFiles/Game.dir/main.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/T
 #############################################
 # Link the executable Game.exe
 
-build Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug CMakeFiles/Game.dir/main.cpp.obj | D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2main.a D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2.dll.a
-  FLAGS = -pg -g
+build Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug CMakeFiles/Game.dir/main.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Scene.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Game.cpp.obj | D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2main.a D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2.dll.a
+  FLAGS = -O0 -g
   LINK_LIBRARIES = -lmingw32  -mwindows  D:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2main.a  D:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Game.dir
   POST_BUILD = cd .
