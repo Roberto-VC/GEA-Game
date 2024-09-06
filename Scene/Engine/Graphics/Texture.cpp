@@ -15,6 +15,7 @@ void Texture::load(const std::string& path, SDL_Renderer* renderer) {
     free();
     SDL_Surface* loadedSurface = SDL_LoadBMP(path.c_str());
 
+
     texture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
 
     width = loadedSurface->w;
@@ -31,14 +32,18 @@ void Texture::free() {
     }
 }
 
-void Texture::render(SDL_Renderer* renderer, int x, int y, SDL_Rect* clip) {
+void Texture::render(SDL_Renderer* renderer, int x, int y, int w, int h, SDL_Rect* clip) {
+    int rWidth = width;
+    int rHeight = height;
 
-    SDL_Rect srcrect = SDL_Rect{ x, y, width, height };
-
-    if (clip != nullptr) {
-        srcrect.w = clip->w;
-        srcrect.h = clip->h;
+    if (w != 0) {
+        rWidth = w;
+    }
+    if (h != 0) {
+        rHeight = h;
     }
 
-    SDL_RenderCopy(renderer, texture, &srcrect, clip);
+    SDL_Rect renderQuad = SDL_Rect{ x, y, rWidth, rHeight };
+
+    SDL_RenderCopy(renderer, texture, clip, &renderQuad);
 }

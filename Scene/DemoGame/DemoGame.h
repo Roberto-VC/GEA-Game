@@ -7,19 +7,14 @@
 #include "Collision.h"
 #include "Scene/Engine/Graphics/TextureManager.h"
 #include "Scene/Engine/Graphics/Texture.h"
+#include "Scene/DemoGame/Backgrounds.h"
+//#include "Scene/DemoGame/Sprites.h"
+#include "Scene/DemoGame/Tilemap.h"
 #include <SDL_render.h>
-#include <time.h>
-#include <random>
-#include <chrono>
 
 
 
-struct SpriteComponent {
-  int width;
-  int height;
-  SDL_Color color;
-  bool active = true;
-};
+
 
 struct ParallaxComponent {
   float parallaxFactor; // How much this layer should move relative to the camera
@@ -30,6 +25,7 @@ struct ParallaxComponent {
 struct Moving {
 
 };
+
 
 bool checkCollision(const PositionComponent pos1, const SpriteComponent spr1,
                  const PositionComponent pos2, const SpriteComponent spr2) {
@@ -70,6 +66,12 @@ class PlayerMovement : public EventSystem {
      }
      if (ks[SDL_SCANCODE_D]) {
        vel.x += 350;   // Moving right
+     }
+     if (ks[SDL_SCANCODE_S]) {
+       vel.y += 350;   // Moving right
+     }
+     if (ks[SDL_SCANCODE_W]) {
+       vel.y += -350;  // Moving left
      }
    }
  }
@@ -113,38 +115,22 @@ class BallCollision : public UpdateSystem {
 
 class SquareSpawnSetupSystem : public SetupSystem {
   void run() {
-    Entity* square2 = scene->createEntity("SQUARE2", 400, 400);
-    square2->addComponent<VelocityComponent>(-400, -400);
-    square2->addComponent<SpriteComponent>(20, 20, SDL_Color{0, 0, 255}, true);
-    square2->addComponent<BallComponent>();
-    //square2->addComponent<NameComponent>("SQUARE2");
+Entity* square = scene->createEntity("SQUARE", 10, 10);
+    square->addComponent<PlayerComponent>();
+    square->addComponent<VelocityComponent>(300);
+    square->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Human.bmp");
+    square->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Human.bmp", 16, 16, 7, 8, 1000);
+    square->addComponent<LayerComponent>(1);
 
-    Entity* square = scene->createEntity("SQUARE", 10, 10);
-    square->addComponent<SpriteComponent>(200, 100, SDL_Color{255, 0, 0}, true);
-    square->addComponent<BrickComponent>();
+    Entity* square2 = scene->createEntity("SQUARE", 10, 10);
+    square2->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp");
+    square2->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp", 16, 16, 5, 8, 1000);
+    square2->addComponent<LayerComponent>(1);
 
-    Entity* square4 = scene->createEntity("SQUARE4", 220, 10);
-    square4->addComponent<SpriteComponent>(200, 100, SDL_Color{255, 0, 0}, true);
-    square4->addComponent<BrickComponent>();
-
-    Entity* square5 = scene->createEntity("SQUAR5", 430, 10);
-    square5->addComponent<SpriteComponent>(200, 100, SDL_Color{255, 0, 0}, true);
-    square5->addComponent<BrickComponent>();
-
-    Entity* square6 = scene->createEntity("SQUAR5", 640, 10);
-    square6->addComponent<SpriteComponent>(200, 100, SDL_Color{255, 0, 0}, true);
-    square6->addComponent<BrickComponent>();
-
-    Entity* square7 = scene->createEntity("SQUAR5", 850, 10);
-    square7->addComponent<SpriteComponent>(200, 100, SDL_Color{255, 0, 0}, true);
-    square7->addComponent<BrickComponent>();
-    //square2->addComponent<NameComponent>("SQUARE");
-
-    Entity* square3 = scene->createEntity("SQUARE", 400, 650);
-    square3->addComponent<SpriteComponent>(250, 50, SDL_Color{0, 255, 0}, true);
-    square3->addComponent<PlayerComponent>();
-    square3->addComponent<VelocityComponent>(0,0);
-    //square2->addComponent<NameComponent>("SQUARE");
+    Entity* square3 = scene->createEntity("SQUARE", 60, 10);
+    square3->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp");
+    square3->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp", 16, 16, 5, 8, 1000);
+    square3->addComponent<LayerComponent>(1);
   }
 };
 
@@ -194,7 +180,7 @@ class WallHitSystem : public UpdateSystem {
 
 
 
-class SquareRenderSystem : public RenderSystem {
+/*class SquareRenderSystem : public RenderSystem {
   void run(SDL_Renderer* renderer) {
     auto view = scene->r.view<PositionComponent, SpriteComponent>();
     for (auto e : view) {
@@ -213,7 +199,7 @@ class SquareRenderSystem : public RenderSystem {
       setScene(NULL);
     };
   }
-};
+};*/
 
 class RemoveSystem : public UpdateSystem {
   void run(float dt) {
@@ -236,111 +222,12 @@ class RemoveSystem : public UpdateSystem {
   }
 };
 
-struct TextureComponent {
-  std::string filename;
-};
 
-struct BackgroundComponent {
-  std::string filename;
-};
 
-class BackgroundSetupSystem : public SetupSystem {
-public:
-  void run() override {
-    Entity* background = scene->createEntity("BACKGROUND");
 
-    Entity* background2 = scene->createEntity("BACKGROUND");
-    const std::string& bgfile2 = "D:/Temp/Game/Assets/Backgrounds/Blue.bmp";
-    background2->addComponent<TextureComponent>(bgfile2);
-    background2->addComponent<BackgroundComponent>(bgfile2);
-    const std::string& bgfile = "D:/Temp/Game/Assets/Backgrounds/Red.bmp";
-    background->addComponent<TextureComponent>(bgfile);
-    background->addComponent<BackgroundComponent>(bgfile);
 
-  }
-};
 
-class TextureSetupSystem : public SetupSystem {
-  void run() {
-    auto view = scene->r.view<TextureComponent>();
-    for (auto e : view) {
-      auto tex = view.get<TextureComponent>(e);
-      TextureManager::LoadTexture(tex.filename, scene->renderer);
-    }
-  }
-};
 
-class BackgroundRenderSystem : public RenderSystem {
-public:
-  BackgroundRenderSystem()
-    : lastSwitchTime(std::chrono::steady_clock::now()),
-      switchInterval(std::chrono::seconds(5)),  // Change interval as needed
-      blinkInterval(std::chrono::milliseconds(200)), // Interval for blinking
-      rng(std::random_device{}()),
-      dist(0, 0), // Initialized later with the correct range
-      isBlinking(false),
-      blinkStartTime(std::chrono::steady_clock::now())
-  {}
-
-  void run(SDL_Renderer* renderer) {
-    auto now = std::chrono::steady_clock::now();
-
-    // Check if it's time to switch the background
-    if (now - lastSwitchTime > switchInterval) {
-      lastSwitchTime = now;
-
-      // Get a list of all background components
-      auto view = scene->r.view<BackgroundComponent>();
-      std::vector<BackgroundComponent*> components;
-
-      for (auto e : view) {
-        components.push_back(&view.get<BackgroundComponent>(e));
-      }
-
-      if (!components.empty()) {
-        // Set up the random number generator to select an index
-        dist.param(std::uniform_int_distribution<size_t>::param_type(0, components.size() - 1));
-        auto selectedIndex = dist(rng);
-        selectedComponent = components[selectedIndex];
-
-        // Start blinking effect
-        isBlinking = true;
-        blinkStartTime = now;
-      }
-    }
-
-    // Calculate elapsed time for blinking effect
-    auto elapsedBlinkTime = now - blinkStartTime;
-    bool shouldBlink = isBlinking && (elapsedBlinkTime < blinkInterval);
-
-    if (shouldBlink) {
-      // Render a blank screen or a color to indicate blinking
-      SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // White or any color
-      SDL_RenderClear(renderer);
-    } else {
-      // Render the selected background component
-      if (selectedComponent) {
-        auto texture = TextureManager::GetTexture(selectedComponent->filename);
-        texture->render(renderer, 100, 0);  // Adjust position as needed
-      }
-
-      // Reset blinking state after rendering the new background
-      if (isBlinking && elapsedBlinkTime >= blinkInterval) {
-        isBlinking = false;
-      }
-    }
-  }
-
-private:
-  std::chrono::steady_clock::time_point lastSwitchTime;
-  std::chrono::seconds switchInterval;
-  std::chrono::milliseconds blinkInterval;
-  std::mt19937 rng;
-  std::uniform_int_distribution<size_t> dist;
-  BackgroundComponent* selectedComponent = nullptr;
-  bool isBlinking;
-  std::chrono::steady_clock::time_point blinkStartTime;
-};
 
 class DemoGame : public Game {
 public:
@@ -354,16 +241,23 @@ public:
 
   void setup() {
     sampleScene = new Scene("SAMPLE SCENE", r, renderer);
-    //addSetupSystem<SquareSpawnSetupSystem>(sampleScene);
     addSetupSystem<BackgroundSetupSystem>(sampleScene);
+    addSetupSystem<SquareSpawnSetupSystem>(sampleScene);
+    addSetupSystem<TilemapSetupSystem>(sampleScene);
     addSetupSystem<TextureSetupSystem>(sampleScene);
-
-    //addUpdateSystem<MovementSystem>(sampleScene);
+    addSetupSystem<AdvancedAutoTilingSetupSystem>(sampleScene);
+    addRenderSystem<BackgroundRenderSystem>(sampleScene);
+    addRenderSystem<SpriteRenderSystem>(sampleScene);
+    //addRenderSystem<TilemapRenderSystem>(sampleScene);
+    addUpdateSystem<MovementSystem>(sampleScene);
+    addUpdateSystem<SpriteMovementSystem>(sampleScene);
+    addUpdateSystem<SpriteAnimationSystem>(sampleScene);
     //addUpdateSystem<WallHitSystem>(sampleScene);
-    //addEventSystem<PlayerMovement>(sampleScene);
+    addEventSystem<PlayerMovement>(sampleScene);
     //addUpdateSystem<RemoveSystem>(sampleScene);
     //addUpdateSystem<BallCollision>(sampleScene);
-    addRenderSystem<BackgroundRenderSystem>(sampleScene);
+
+
     //addRenderSystem<SquareRenderSystem>(sampleScene);
 
 

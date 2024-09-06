@@ -35,6 +35,12 @@ add_executable(Game main.cpp
         Scene/Engine/Graphics/Texture.h
         Scene/Engine/Graphics/Texture.cpp
         Scene/Engine/Graphics/TextureManager.cpp
+        Scene/DemoGame/Tilemap.h
+        Scene/DemoGame/Tilemap.h
+        Scene/DemoGame/Sprites.h
+        Scene/DemoGame/Sprites.h
+        Scene/DemoGame/Backgrounds.h
+        Scene/DemoGame/Backgrounds.h
 
 )
 target_link_libraries(Game ${SDL2_LIBRARY} -lmingw32)
