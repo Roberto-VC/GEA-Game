@@ -10,6 +10,8 @@
 #include "Scene/DemoGame/Backgrounds.h"
 //#include "Scene/DemoGame/Sprites.h"
 #include "Scene/DemoGame/Tilemap.h"
+#include "Scene/DemoGame/Player.h"
+#include "Scene/DemoGame/Colliders.h"
 #include <SDL_render.h>
 
 
@@ -120,6 +122,7 @@ Entity* square = scene->createEntity("SQUARE", 10, 10);
     square->addComponent<VelocityComponent>(300);
     square->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Human.bmp");
     square->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Human.bmp", 16, 16, 7, 8, 1000);
+    square->addComponent<BoxColliderComponent>(SDL_Rect{25, 0, 60, 100}, SDL_Color{255, 0, 0});
     square->addComponent<LayerComponent>(1);
 
     Entity* square2 = scene->createEntity("SQUARE", 10, 10);
@@ -131,6 +134,13 @@ Entity* square = scene->createEntity("SQUARE", 10, 10);
     square3->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp");
     square3->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp", 16, 16, 5, 8, 1000);
     square3->addComponent<LayerComponent>(1);
+
+    Entity* face = scene->createEntity("face", 200, 200);
+    face->addComponent<PowerUpComponent>();
+    face->addComponent<TextureComponent>("D:/Temp/Game/Assets/Backgrounds/face.bmp");
+    face->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Backgrounds/face.bmp", 8, 8, 10, 0, 0);
+    face->addComponent<BoxColliderComponent>(SDL_Rect{0, 0, 80, 80}, SDL_Color{0, 255, 0});
+    face->addComponent<LayerComponent>(1);
   }
 };
 
@@ -236,7 +246,7 @@ public:
 
 public:
   DemoGame()
-  : Game("SAMPLE", 1024, 768)
+  : Game("SAMPLE", 800, 720)
   { }
 
   void setup() {
@@ -245,10 +255,18 @@ public:
     addSetupSystem<SquareSpawnSetupSystem>(sampleScene);
     addSetupSystem<TilemapSetupSystem>(sampleScene);
     addSetupSystem<TextureSetupSystem>(sampleScene);
-    addSetupSystem<AdvancedAutoTilingSetupSystem>(sampleScene);
+    addSetupSystem<AutoTilingSetupSystem>(sampleScene);
+    addSetupSystem<TilemapEntitySetupSystem>(sampleScene);
+
     addRenderSystem<BackgroundRenderSystem>(sampleScene);
     addRenderSystem<SpriteRenderSystem>(sampleScene);
-    //addRenderSystem<TilemapRenderSystem>(sampleScene);
+    addRenderSystem<TilemapRenderSystem>(sampleScene);
+    addRenderSystem<ColliderRenderSystem>(sampleScene);
+    addUpdateSystem<ColliderResetSystem>(sampleScene);
+    addUpdateSystem<PlayerPowerUpCollisionDetectionSystem>(sampleScene);
+    addUpdateSystem<PlayerPowerUpCollisionSystem>(sampleScene);
+    addUpdateSystem<PlayerTileCollisionDetectionSystem>(sampleScene);
+    addUpdateSystem<PlayerWallCollisionSystem>(sampleScene);
     addUpdateSystem<MovementSystem>(sampleScene);
     addUpdateSystem<SpriteMovementSystem>(sampleScene);
     addUpdateSystem<SpriteAnimationSystem>(sampleScene);

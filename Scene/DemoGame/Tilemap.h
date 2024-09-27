@@ -1,97 +1,149 @@
 #pragma once
 #include <string>
-#include "Scene/DemoGame/Sprites.h"
+#include "Sprites.h"
 #include "Scene/Engine/Entity.h"
 #include "Scene/Engine/Systems.h"
-#include "Scene/Engine/Components.h"
 #include <iostream>
+#include <time.h>
+#include <random>
+#include <chrono>
+
+enum class TileType {
+  NONE,
+  WALL,
+  TRIGGER,
+};
+
+struct Tile {
+  int index;
+  int tilemapIndex;
+  TileType type;
+};
+
+struct TileComponent {
+  Tile tile;
+};
 
 struct TilemapComponent {
   std::string filename;
-  std::vector<std::vector<int>> map;
+  std::vector<Tile> tiles;
   int tileSize;
   int scale;
+  int width;
+  int height;
 };
 
 class TilemapSetupSystem : public SetupSystem {
 public:
   void run() override {
-    std::vector<std::vector<int>> map = {
-      {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-      {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-      {0, 0, 0, 0, 0, 0, 0, 1, 1, 0},
-      {0, 0, 0, 0, 0, 1, 1, 1, 0, 0},
-      {0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
-      {0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
-      {0, 0, 0, 1, 0, 1, 0, 0, 1, 0},
-      {0, 0, 0, 1, 1, 1, 0, 0, 1, 0},
-      {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-      {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+    std::vector<int> initialMap = {
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     };
 
-    std::string filename = "D:/Temp/Game/Assets/Tilesets/large.bmp";
-    Entity* tilemap = scene->createEntity("TILEMAP");
-    tilemap->addComponent<TilemapComponent>(
-      "D:/Temp/Game/Assets/Tilesets/large.bmp",
-      map,
-      8,
-      8
+    std::string filename = "D:/Temp/Game/Assets/Tilesets/tilered.bmp";
+    std::string filename2 = "D:/Temp/Game/Assets/Tilesets/bluetile.bmp";
+    int tileSize = 8;
+    int tileScale = 8;
+    std::vector<Tile> tiles;
+    for (int i = 0; i < initialMap.size(); i++) {
+      TileType type = TileType::NONE;
+      switch(initialMap[i]) {
+        case 1:
+          type = TileType::WALL;
+          break;
+        case 0:
+          break;
+      }
+      Tile tile = Tile{i, 0, type};
+      tiles.push_back(tile);
+    }
+
+    Entity* tilemapEntity = scene->createEntity("TILEMAP");
+    tilemapEntity->addComponent<TilemapComponent>(
+      filename,
+      tiles,
+      tileSize,
+      tileScale,
+      12,
+      12
     );
-    tilemap->addComponent<TextureComponent>("D:/Temp/Game/Assets/Tilesets/large.bmp");
+    tilemapEntity->addComponent<TextureComponent>("D:/Temp/Game/Assets/Tilesets/tilered.bmp");
+
+    Entity* tilemapEntity2 = scene->createEntity("TILEMAP2");
+    tilemapEntity2->addComponent<TilemapComponent>(
+  filename2,
+  tiles,
+  tileSize,
+  tileScale,
+  12,
+  12
+);
+
+    tilemapEntity2->addComponent<TextureComponent>("D:/Temp/Game/Assets/Tilesets/bluetile.bmp");
   }
 };
 
 class AutoTilingSetupSystem : public SetupSystem {
 private:
-  bool isTile(std::vector<std::vector<int>>& map, int x, int y) {
-    return x >= 0 && x < map[0].size() && y >= 0 && y < map.size() && map[y][x] == 1;
+  bool isTile(const std::vector<Tile>& map, int x, int y, int w, int h) {
+    return (x >= 0 && x < w && y >= 0 && y < h && map[y * w + x].type == TileType::WALL);
   }
 
 public:
   void run() override {
     auto view = scene->r.view<TilemapComponent>();
+
     for (auto e : view) {
       auto& tmap = view.get<TilemapComponent>(e);
-      int tilemapHeight = tmap.map.size();
-      int tilemapWidth = tmap.map[0].size();
-      std::vector<std::vector<int>> map = tmap.map;
+      const int mapWidth = tmap.width;
+      const int mapHeight = tmap.height;
 
-      for (int y = 0; y < tilemapHeight; y++) {
-        for (int x = 0; x < tilemapWidth; x++) {
-          if (tmap.map[y][x] == 1) {
-            std::cout << "tmap.map[y][x]: " << tmap.map[y][x] << std::endl;
-            std::cout << "x: " << x << std::endl;
-            std::cout << "y: " << y << std::endl;
-            bool north = isTile(tmap.map, x, y - 1);
-            bool south = isTile(tmap.map, x, y + 1);
-            bool west = isTile(tmap.map, x - 1, y);
-            bool east = isTile(tmap.map, x + 1, y);
+      std::vector<Tile> newMap = tmap.tiles;
 
+      for (int y = 0; y < mapHeight; y++) {
+        for (int x = 0; x < mapWidth; x++) {
+          if (tmap.tiles[y * mapWidth + x].type == TileType::WALL) {
             int mask = 0;
-            if (north) {
-              mask |= 1;
-            }
-            if (west) {
-              mask |= 2;
-            }
-            if (east) {
-              mask |= 4;
-            }
-            if (south) {
-              mask |= 8;
-            }
-            std::cout << "mask: " << mask << std::endl << std::endl;
-            map[y][x] = mask;
 
+            // Check neighboring tiles
+            bool north = isTile(tmap.tiles, x, y - 1, mapWidth, mapHeight);
+            bool south = isTile(tmap.tiles, x, y + 1, mapWidth, mapHeight);
+            bool west = isTile(tmap.tiles, x - 1, y, mapWidth, mapHeight);
+            bool east = isTile(tmap.tiles, x + 1, y, mapWidth, mapHeight);
+
+            // Set the bits for north, south, east, west
+            if (north) mask |= 1;   // North
+            if (west)  mask |= 2;   // West
+            if (east)  mask |= 4;   // East
+            if (south) mask |= 8;   // South
+
+            // Debugging output to see mask value
+            std::cout << "Mask for (" << x << ", " << y << "): " << mask << std::endl;
+
+            // Map the mask to the tile index
+            newMap[y * mapWidth + x].tilemapIndex = mask;  // Adjust this based on your own mapping logic
           } else {
-            map[y][x] = -1;
+            newMap[y * mapWidth + x].tilemapIndex = -1;  // Or some default tile index for non-wall tiles
           }
         }
       }
-      tmap.map = map;
+
+      tmap.tiles = newMap;
     }
   }
 };
+
 
 class AdvancedAutoTilingSetupSystem : public SetupSystem {
 private:
@@ -106,8 +158,8 @@ private:
   };
 
 
-  bool isTile(const std::vector<std::vector<int>>& map, int x, int y) {
-    return (x >= 0 && x < map[0].size() && y >= 0 && y < map.size() && map[y][x] == 1);
+  bool isTile(const std::vector<Tile>& map, int x, int y, int w, int h) {
+    return (x >= 0 && x < w && y >= 0 && y < h && map[y * w + x].type == TileType::WALL);
   }
 
 public:
@@ -117,20 +169,20 @@ public:
     for (auto entity : view) {
       auto& tilemap = view.get<TilemapComponent>(entity);
 
-      const size_t mapHeight = tilemap.map.size();
-      const size_t mapWidth = tilemap.map[0].size();
+      const int mapHeight = tilemap.width;
+      const int mapWidth = tilemap.height;
 
-      std::vector<std::vector<int>> newMap = tilemap.map;
+      std::vector<Tile> newMap = tilemap.tiles;
 
-      for (size_t y = 0; y < mapHeight; ++y) {
-        for (size_t x = 0; x < mapWidth; ++x) {
-          if (tilemap.map[y][x] == 1) {
+      for (int y = 0; y < mapHeight; y++) {
+        for (int x = 0; x < mapWidth; x++) {
+          if (tilemap.tiles[y * mapWidth + x].type == TileType::WALL) {
             int mask = 0;
 
-            bool north = isTile(tilemap.map, x, y-1);
-            bool south = isTile(tilemap.map, x, y+1);
-            bool west = isTile(tilemap.map, x-1, y);
-            bool east = isTile(tilemap.map, x+1, y);
+            bool north = isTile(tilemap.tiles, x, y-1, tilemap.width, tilemap.height);
+            bool south = isTile(tilemap.tiles, x, y+1, tilemap.width, tilemap.height);
+            bool west = isTile(tilemap.tiles, x-1, y, tilemap.width, tilemap.height);
+            bool east = isTile(tilemap.tiles, x+1, y, tilemap.width, tilemap.height);
 
             // Cardinal directions
             if (north) mask |= 2;
@@ -139,77 +191,137 @@ public:
             if (south) mask |= 64;
 
             // Corners (with redundancy check)
-            if (north && west && isTile(tilemap.map, x-1, y-1)) mask |= 1;
-            if (north && east && isTile(tilemap.map, x+1, y-1)) mask |= 4;
-            if (south && west && isTile(tilemap.map, x-1, y+1)) mask |= 32;
-            if (south && east && isTile(tilemap.map, x+1, y+1)) mask |= 128;
+            if (north && west && isTile(tilemap.tiles, x-1, y-1, tilemap.width, tilemap.height)) mask |= 1;
+            if (north && east && isTile(tilemap.tiles, x+1, y-1, tilemap.width, tilemap.height)) mask |= 4;
+            if (south && west && isTile(tilemap.tiles, x-1, y+1, tilemap.width, tilemap.height)) mask |= 32;
+            if (south && east && isTile(tilemap.tiles, x+1, y+1, tilemap.width, tilemap.height)) mask |= 128;
 
             // Map the mask to the tile index
             auto it = maskToTileIndex.find(mask);
             if (it != maskToTileIndex.end()) {
-              newMap[y][x] = it->second;
+              newMap[y * mapWidth + x].tilemapIndex = it->second;
             } else {
               // If the mask doesn't have a mapping, use a default tile
-              newMap[y][x] = 47;  // Assuming 47 is your default tile
+              newMap[y * mapWidth + x].tilemapIndex = 47;
             }
           } else {
-            newMap[y][x] = -1;  // Empty space
+            newMap[y * mapWidth + x].tilemapIndex = -1;
           }
         }
       }
 
-      tilemap.map = newMap;
+      tilemap.tiles = newMap;
     }
   }
 };
 
 class TilemapRenderSystem : public RenderSystem {
+private:
+  std::chrono::steady_clock::time_point lastSwitchTime;
+  std::chrono::seconds switchInterval;
+  std::chrono::milliseconds blinkInterval;
+  std::mt19937 rng;
+  std::uniform_int_distribution<size_t> dist;
+  TilemapComponent* selectedComponent = nullptr;
+  bool isBlinking;
+  std::chrono::steady_clock::time_point blinkStartTime;
+
+public:
+  TilemapRenderSystem()
+    : lastSwitchTime(std::chrono::steady_clock::now()),
+      switchInterval(std::chrono::seconds(5)),  // Change interval as needed
+      blinkInterval(std::chrono::milliseconds(200)), // Interval for blinking
+      rng(std::random_device{}()),
+      dist(0, 0), // Initialized later with the correct range
+      isBlinking(false),
+      blinkStartTime(std::chrono::steady_clock::now())
+  {}
+
   void run(SDL_Renderer* renderer) {
-    auto view = scene->r.view<TilemapComponent, TextureComponent>();
-    for (auto e : view) {
+    auto now = std::chrono::steady_clock::now();
 
-      auto tmap = view.get<TilemapComponent>(e);
-      SDL_Log("No Error");
-      auto tex = view.get<TextureComponent>(e);
-      SDL_Log("Error");
+    if (now - lastSwitchTime > switchInterval) {
+      lastSwitchTime = now;
+      auto view = scene->r.view<TilemapComponent>();
+      std::vector<TilemapComponent*> components;
+      std::vector<TilemapComponent*> components1;
 
-      Texture* texture = TextureManager::GetTexture(tex.filename);
-      SDL_Log("Error textura");
-      SDL_Log(tex.filename.c_str());
+      for (auto e : view) {
+        components.push_back(&view.get<TilemapComponent>(e));
+      }
 
-      int tileSize = tmap.tileSize * tmap.scale;
-      int tilemapHeight = tmap.map.size();
-      int tilemapWidth = tmap.map[0].size();
 
-      for (int y = 0; y < tilemapHeight; y++) {
-        for (int x = 0; x < tilemapWidth; x++) {
-          int tileIndex = tmap.map[y][x];
-          SDL_Log("1");
+      if (!components.empty()) {
+        // Set up the random number generator to select an index
+        dist.param(std::uniform_int_distribution<size_t>::param_type(0, components.size() - 1));
+        auto selectedIndex = dist(rng);
+        selectedComponent = components[selectedIndex];
 
-          if (tileIndex >= 0) {
-            int tileIndexX = tileIndex % 8;
-            int tileIndexY = tileIndex / 8;
-
-            SDL_Rect clip = {
-              tileIndexX * tmap.tileSize,
-              tileIndexY * tmap.tileSize,
-              tmap.tileSize,
-              tmap.tileSize,
-            };
-            SDL_Log("2");
-
-            texture->render(
-              scene->renderer,
-              x * tileSize,
-              y * tileSize,
-              tileSize,
-              tileSize,
-              &clip
-            );
-            SDL_Log("3");
-          }
-        }
+        // Start blinking effect
+        isBlinking = true;
+        blinkStartTime = now;
       }
     }
+
+
+    auto elapsedBlinkTime = now - blinkStartTime;
+    bool shouldBlink = isBlinking && (elapsedBlinkTime < blinkInterval);
+
+    if (shouldBlink) {
+      // Render a blank screen or a color to indicate blinking
+      SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // White or any color
+      SDL_RenderClear(renderer);
+    } else {
+      // Render the selected background component
+      if (selectedComponent) {
+
+        auto texture = TextureManager::GetTexture(selectedComponent->filename);
+        auto tmap = selectedComponent;
+
+
+
+
+          int tileSize = tmap->tileSize * tmap->scale;
+          int tilemapHeight = tmap->height;
+          int tilemapWidth = tmap->width;
+
+
+          for (int y = 0; y < tilemapHeight; y++) {
+            for (int x = 0; x < tilemapWidth; x++) {
+              int tileIndex = tmap->tiles[y * tilemapWidth + x].tilemapIndex;
+
+              if (tileIndex >= 0) {
+                int tileIndexX = tileIndex % 4;
+                int tileIndexY = tileIndex / 4;
+
+
+                SDL_Rect clip = {
+                  tileIndexX * tmap->tileSize,
+                  tileIndexY * tmap->tileSize,
+                  tmap->tileSize,
+                  tmap->tileSize,
+                };
+
+                texture->render(
+                  scene->renderer,
+                  x * tileSize,
+                  y * tileSize,
+                  tileSize,
+                  tileSize,
+                  &clip
+                );
+              }
+            }
+          }
+
+      }
+      }
+
+      // Reset blinking state after rendering the new background
+      if (isBlinking && elapsedBlinkTime >= blinkInterval) {
+        isBlinking = false;
+      }
+
+
   }
-}; 
+};

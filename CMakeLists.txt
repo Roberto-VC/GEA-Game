@@ -41,6 +41,8 @@ add_executable(Game main.cpp
         Scene/DemoGame/Sprites.h
         Scene/DemoGame/Backgrounds.h
         Scene/DemoGame/Backgrounds.h
+        Scene/DemoGame/Player.h
+        Scene/DemoGame/Colliders.h
 
 )
 target_link_libraries(Game ${SDL2_LIBRARY} -lmingw32)

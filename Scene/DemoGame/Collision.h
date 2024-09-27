@@ -12,8 +12,7 @@ struct BallComponent {
 
 };
 
-struct PlayerComponent{
-};
+
 
 
 
