@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "box2d-3.0.0/extern/simde",
+		"source" : "box2d-3.0.0/extern/simde"
+	}
+}
