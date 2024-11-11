@@ -94,30 +94,14 @@ class SpriteAnimationSystem : public UpdateSystem {
 
 class SpriteRenderSystem : public RenderSystem {
   void run(SDL_Renderer* renderer) {
-    // Create a view that includes PositionComponent, SpriteComponent, and LayerComponent
-    auto view = scene->r.view<PositionComponent, SpriteComponent, LayerComponent>();
-
-    // Create a vector of entities
-    std::vector<entt::entity> sortedEntities;
-    sortedEntities.reserve(std::distance(view.begin(), view.end()));
-
-    // Populate the vector with entities from the view
+    auto view = scene->r.view<PositionComponent, SpriteComponent, ActiveComponent>();
     for (auto e : view) {
-      sortedEntities.push_back(e);
-    }
+      auto pos = view.get<PositionComponent>(e);
+      auto spr = view.get<SpriteComponent>(e);
+      auto act = view.get<ActiveComponent>(e);
+      SDL_Log("%s", spr.filename.c_str());
 
-    // Sort entities by their layer component
-    std::sort(sortedEntities.begin(), sortedEntities.end(), [this](auto a, auto b) {
-      auto& layerA = scene->r.get<LayerComponent>(a);
-      auto& layerB = scene->r.get<LayerComponent>(b);
-      return layerA.layer < layerB.layer;
-    });
-
-    // Render sorted entities
-    for (auto e : sortedEntities) {
-      auto pos = scene->r.get<PositionComponent>(e);
-      auto spr = scene->r.get<SpriteComponent>(e);
-
+      if (act.active == true){
       Texture* texture = TextureManager::GetTexture(spr.filename);
       SDL_Rect clip = {
         spr.xIndex * spr.width,
@@ -127,6 +111,11 @@ class SpriteRenderSystem : public RenderSystem {
       };
 
       texture->render(scene->renderer, pos.x, pos.y, spr.width * spr.scale, spr.height * spr.scale, &clip);
+      SDL_Log("WHY?");
+    }else {
+      pos.x = -100;
+      pos.y = -100;
+    }
     }
   }
 };

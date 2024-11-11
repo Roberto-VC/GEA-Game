@@ -21,6 +21,14 @@ set(SDL2_PATH "SDL2-2.30.5\\x86_64-w64-mingw32")
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
+set(SDL2_MIXER_PATH "SDL2_mixer-2.8.0\\x86_64-w64-mingw32")
+find_package(SDL2_mixer REQUIRED)
+include_directories(${SDL2_MIXER_INCLUDE_DIRS})
+
+include_directories(box2d-3.0.0/include)  # Include the Box2D headers
+add_subdirectory(box2d-3.0.0)
+
+
 add_executable(Game main.cpp
         Scene/Engine/Scene.cpp
         Scene/Engine/Scene.h
@@ -43,6 +51,7 @@ add_executable(Game main.cpp
         Scene/DemoGame/Backgrounds.h
         Scene/DemoGame/Player.h
         Scene/DemoGame/Colliders.h
+        Scene/DemoGame/Sound.h
 
 )
-target_link_libraries(Game ${SDL2_LIBRARY} -lmingw32)
+target_link_libraries(Game ${SDL2_LIBRARY} ${SDL2_MIXER_LIBRARIES} box2d -lmingw32)

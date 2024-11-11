@@ -51,8 +51,8 @@ public:
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     };
 
-    std::string filename = "D:/Temp/Game/Assets/Tilesets/tilered.bmp";
-    std::string filename2 = "D:/Temp/Game/Assets/Tilesets/bluetile.bmp";
+    std::string filename = "../Assets/Tilesets/tilered.bmp";
+    std::string filename2 = "../Assets/Tilesets/bluetile.bmp";
     int tileSize = 8;
     int tileScale = 8;
     std::vector<Tile> tiles;
@@ -78,7 +78,7 @@ public:
       12,
       12
     );
-    tilemapEntity->addComponent<TextureComponent>("D:/Temp/Game/Assets/Tilesets/tilered.bmp");
+    tilemapEntity->addComponent<TextureComponent>("../Assets/Tilesets/tilered.bmp");
 
     Entity* tilemapEntity2 = scene->createEntity("TILEMAP2");
     tilemapEntity2->addComponent<TilemapComponent>(
@@ -90,9 +90,22 @@ public:
   12
 );
 
-    tilemapEntity2->addComponent<TextureComponent>("D:/Temp/Game/Assets/Tilesets/bluetile.bmp");
+    tilemapEntity2->addComponent<TextureComponent>("../Assets/Tilesets/bluetile.bmp");
+    Entity* background = scene->createEntity("BACKGROUND");
+
+    Entity* background2 = scene->createEntity("BACKGROUND");
+    const std::string& bgfile2 = "../Assets/Backgrounds/Red.bmp";
+    background2->addComponent<TextureComponent>(bgfile2);
+    background2->addComponent<BackgroundComponent>(bgfile2);
+    background2->addComponent<LayerComponent>(0);
+    const std::string& bgfile = "../Assets/Backgrounds/Blue.bmp";
+    background->addComponent<TextureComponent>(bgfile);
+    background->addComponent<BackgroundComponent>(bgfile);
+    background->addComponent<LayerComponent>(0);
   }
+
 };
+
 
 class AutoTilingSetupSystem : public SetupSystem {
 private:
@@ -223,6 +236,7 @@ private:
   std::mt19937 rng;
   std::uniform_int_distribution<size_t> dist;
   TilemapComponent* selectedComponent = nullptr;
+  BackgroundComponent* bselectedComponent = nullptr;
   bool isBlinking;
   std::chrono::steady_clock::time_point blinkStartTime;
 
@@ -238,6 +252,7 @@ public:
   {}
 
   void run(SDL_Renderer* renderer) {
+
     auto now = std::chrono::steady_clock::now();
 
     if (now - lastSwitchTime > switchInterval) {
@@ -250,12 +265,30 @@ public:
         components.push_back(&view.get<TilemapComponent>(e));
       }
 
+      auto view2 = scene->r.view<BackgroundComponent>();
 
+      std::vector<BackgroundComponent*> bcomponents;
+      for (auto e : view2) {
+        bcomponents.push_back(&view2.get<BackgroundComponent>(e));
+      }
+
+      unsigned long long indexx;
       if (!components.empty()) {
         // Set up the random number generator to select an index
         dist.param(std::uniform_int_distribution<size_t>::param_type(0, components.size() - 1));
         auto selectedIndex = dist(rng);
+        indexx = selectedIndex;
         selectedComponent = components[selectedIndex];
+
+        // Start blinking effect
+        isBlinking = true;
+        blinkStartTime = now;
+      }
+
+      if (!bcomponents.empty()) {
+        // Set up the random number generator to select an index
+
+        bselectedComponent = bcomponents[indexx];
 
         // Start blinking effect
         isBlinking = true;
@@ -273,6 +306,11 @@ public:
       SDL_RenderClear(renderer);
     } else {
       // Render the selected background component
+      if(bselectedComponent) {
+        auto texture = TextureManager::GetTexture(bselectedComponent->filename);
+        texture->render(renderer, 0, 0);  // Adjust position as needed
+      }
+
       if (selectedComponent) {
 
         auto texture = TextureManager::GetTexture(selectedComponent->filename);
@@ -293,7 +331,6 @@ public:
               if (tileIndex >= 0) {
                 int tileIndexX = tileIndex % 4;
                 int tileIndexY = tileIndex / 4;
-
 
                 SDL_Rect clip = {
                   tileIndexX * tmap->tileSize,

@@ -26,7 +26,7 @@ Entity* Scene::createEntity(const std::string& n, int x, int y) {
     Entity* entity = new Entity(r.create(), this);
     entity->addComponent<NameComponent>(n);
     entity->addComponent<PositionComponent>(x, y);
-
+    entity->addComponent<ActiveComponent>(true);
     return entity;
 }
 

@@ -12,7 +12,13 @@ struct BallComponent {
 
 };
 
-
+        /*auto audioView = scene->r.view<AudioComponent>();
+        for (auto audioEntity : audioView) {
+          auto& audio = audioView.get<AudioComponent>(audioEntity);
+          audio.triggerPlay = true; // Set the trigger to play audio
+          SDL_Log("Hi!");
+          break; // Exit after finding the first audio entity
+        }*/
 
 
 

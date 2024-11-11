@@ -9,6 +9,7 @@
 #include <chrono>
 
 
+
 struct BackgroundComponent {
   std::string filename;
 };
@@ -21,11 +22,11 @@ public:
     Entity* background = scene->createEntity("BACKGROUND");
 
     Entity* background2 = scene->createEntity("BACKGROUND");
-    const std::string& bgfile2 = "D:/Temp/Game/Assets/Backgrounds/Blue.bmp";
+    const std::string& bgfile2 = "../Assets/Backgrounds/Blue.bmp";
     background2->addComponent<TextureComponent>(bgfile2);
     background2->addComponent<BackgroundComponent>(bgfile2);
     background2->addComponent<LayerComponent>(0);
-    const std::string& bgfile = "D:/Temp/Game/Assets/Backgrounds/Red.bmp";
+    const std::string& bgfile = "../Assets/Backgrounds/Red.bmp";
     background->addComponent<TextureComponent>(bgfile);
     background->addComponent<BackgroundComponent>(bgfile);
     background->addComponent<LayerComponent>(0);

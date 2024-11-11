@@ -1,32 +1,242 @@
 [
 {
   "directory": "D:/Temp/Game/cmake-build-debug",
-  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\main.cpp.obj -c D:\\Temp\\Game\\main.cpp",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\main.cpp.obj -c D:\\Temp\\Game\\main.cpp",
   "file": "D:\\Temp\\Game\\main.cpp",
   "output": "CMakeFiles\\Game.dir\\main.cpp.obj"
 },
 {
   "directory": "D:/Temp/Game/cmake-build-debug",
-  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Scene.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Scene.cpp",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Scene.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Scene.cpp",
   "file": "D:\\Temp\\Game\\Scene\\Engine\\Scene.cpp",
   "output": "CMakeFiles\\Game.dir\\Scene\\Engine\\Scene.cpp.obj"
 },
 {
   "directory": "D:/Temp/Game/cmake-build-debug",
-  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Game.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Game.cpp",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Game.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Game.cpp",
   "file": "D:\\Temp\\Game\\Scene\\Engine\\Game.cpp",
   "output": "CMakeFiles\\Game.dir\\Scene\\Engine\\Game.cpp.obj"
 },
 {
   "directory": "D:/Temp/Game/cmake-build-debug",
-  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Graphics\\Texture.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Graphics\\Texture.cpp",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Graphics\\Texture.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Graphics\\Texture.cpp",
   "file": "D:\\Temp\\Game\\Scene\\Engine\\Graphics\\Texture.cpp",
   "output": "CMakeFiles\\Game.dir\\Scene\\Engine\\Graphics\\Texture.cpp.obj"
 },
 {
   "directory": "D:/Temp/Game/cmake-build-debug",
-  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Graphics\\TextureManager.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Graphics\\TextureManager.cpp",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\g++.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src  -O0 -g -std=gnu++23 -fdiagnostics-color=always -o CMakeFiles\\Game.dir\\Scene\\Engine\\Graphics\\TextureManager.cpp.obj -c D:\\Temp\\Game\\Scene\\Engine\\Graphics\\TextureManager.cpp",
   "file": "D:\\Temp\\Game\\Scene\\Engine\\Graphics\\TextureManager.cpp",
   "output": "CMakeFiles\\Game.dir\\Scene\\Engine\\Graphics\\TextureManager.cpp.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\aabb.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\aabb.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\aabb.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\aabb.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\allocate.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\allocate.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\allocate.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\allocate.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\array.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\array.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\array.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\array.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\bitset.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\bitset.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\bitset.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\bitset.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\block_array.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\block_array.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\block_array.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\block_array.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\body.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\body.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\body.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\body.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\broad_phase.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\broad_phase.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\broad_phase.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\broad_phase.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\constraint_graph.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\constraint_graph.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\constraint_graph.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\constraint_graph.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\contact.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\contact.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\contact.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\contact.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\contact_solver.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\contact_solver.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\contact_solver.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\contact_solver.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\core.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\core.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\core.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\core.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\distance.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\distance.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\distance.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\distance.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\distance_joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\distance_joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\distance_joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\distance_joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\dynamic_tree.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\dynamic_tree.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\dynamic_tree.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\dynamic_tree.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\geometry.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\geometry.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\geometry.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\geometry.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\hull.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\hull.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\hull.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\hull.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\id_pool.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\id_pool.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\id_pool.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\id_pool.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\island.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\island.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\island.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\island.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\manifold.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\manifold.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\manifold.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\manifold.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\math_functions.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\math_functions.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\math_functions.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\math_functions.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\motor_joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\motor_joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\motor_joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\motor_joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\mouse_joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\mouse_joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\mouse_joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\mouse_joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\prismatic_joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\prismatic_joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\prismatic_joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\prismatic_joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\revolute_joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\revolute_joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\revolute_joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\revolute_joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\shape.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\shape.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\shape.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\shape.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\solver.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\solver.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\solver.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\solver.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\solver_set.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\solver_set.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\solver_set.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\solver_set.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\stack_allocator.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\stack_allocator.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\stack_allocator.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\stack_allocator.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\table.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\table.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\table.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\table.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\timer.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\timer.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\timer.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\timer.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\types.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\types.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\types.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\types.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\weld_joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\weld_joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\weld_joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\weld_joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\wheel_joint.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\wheel_joint.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\wheel_joint.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\wheel_joint.c.obj"
+},
+{
+  "directory": "D:/Temp/Game/cmake-build-debug",
+  "command": "\"D:\\Program Files\\CLion 2024.1.4\\bin\\mingw\\bin\\gcc.exe\" -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror -o box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\world.c.obj -c D:\\Temp\\Game\\box2d-3.0.0\\src\\world.c",
+  "file": "D:\\Temp\\Game\\box2d-3.0.0\\src\\world.c",
+  "output": "box2d-3.0.0\\src\\CMakeFiles\\box2d.dir\\world.c.obj"
 }
 ]

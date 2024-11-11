@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include <SDL.h>
 #include <iostream>
 #include "Tilemap.h"
@@ -6,11 +7,17 @@
 #include "Scene/Engine/Systems.h"
 /* #include "Tilemap.h" */
 #include "Player.h"
+std::vector<Entity*> entitiesToRemove;
+
 
 enum class CollisionType {
   NONE,
   WALL,
   TRIGGER
+};
+
+struct GravityComponent {
+  float gravity; // Gravitational force
 };
 
 
@@ -38,20 +45,22 @@ public:
 class ColliderRenderSystem : public RenderSystem {
 public:
   void run(SDL_Renderer* renderer) override {
-    auto view = scene->r.view<PositionComponent, BoxColliderComponent>();
+    auto view = scene->r.view<PositionComponent, BoxColliderComponent, ActiveComponent>();
 
     for (auto entity : view) {
       auto [position, collider] = view.get<PositionComponent, BoxColliderComponent>(entity);
+      auto act = view.get<ActiveComponent>(entity);
+      if (act.active){
+        SDL_Rect renderRect = {
+          position.x + collider.rect.x,
+          position.y + collider.rect.y,
+          collider.rect.w,
+          collider.rect.h,
+        };
 
-      SDL_Rect renderRect = {
-        position.x + collider.rect.x,
-        position.y + collider.rect.y,
-        collider.rect.w,
-        collider.rect.h,
-      };
-
-      SDL_SetRenderDrawColor(renderer, collider.color.r, collider.color.g, collider.color.b, collider.color.a);
-      SDL_RenderDrawRect(renderer, &renderRect);
+        SDL_SetRenderDrawColor(renderer, collider.color.r, collider.color.g, collider.color.b, collider.color.a);
+        SDL_RenderDrawRect(renderer, &renderRect);
+      }
     }
 
   }
@@ -60,12 +69,14 @@ public:
 class PlayerPowerUpCollisionDetectionSystem : public UpdateSystem {
 public:
   void run (float dT) override {
-    auto playerView = scene->r.view<PlayerComponent, BoxColliderComponent, PositionComponent>();
-    auto powerUpView = scene->r.view<PowerUpComponent, BoxColliderComponent, PositionComponent>();
+    auto playerView = scene->r.view<PlayerComponent, BoxColliderComponent, PositionComponent, ActiveComponent>();
+    auto powerUpView = scene->r.view<EnemyComponent, BoxColliderComponent, PositionComponent, ActiveComponent>();
+    auto bulletView = scene->r.view<BulletComponent, BoxColliderComponent, PositionComponent, ActiveComponent>();
 
     for (auto player : playerView) {
       auto position = playerView.get<PositionComponent>(player);
       auto& collider = playerView.get<BoxColliderComponent>(player);
+
 
       SDL_Rect playerRect = {
         position.x + collider.rect.x,
@@ -76,6 +87,8 @@ public:
 
       for (auto powerUp: powerUpView) {
         auto [pposition, pcollider] = powerUpView.get<PositionComponent, BoxColliderComponent>(powerUp);
+        auto& active = playerView.get<ActiveComponent>(player);
+        auto& active2 = powerUpView.get<ActiveComponent>(powerUp);
 
         SDL_Rect powerUpRect = {
           pposition.x + pcollider.rect.x,
@@ -84,12 +97,46 @@ public:
           pcollider.rect.h,
         };
 
-        if (SDL_HasIntersection(&playerRect, &powerUpRect)) {
+        if (SDL_HasIntersection(&playerRect, &powerUpRect) && active2.active) {
+          SDL_Log("BEEP");
+          active.active = false;
+          collider.collisionType = CollisionType::TRIGGER;
+        }
+      }
+    }
+
+    for (auto enemy : powerUpView) {
+      auto position = powerUpView.get<PositionComponent>(enemy);
+      auto& collider = powerUpView.get<BoxColliderComponent>(enemy);
+
+
+      SDL_Rect powerUpRect = {
+        position.x + collider.rect.x,
+        position.y + collider.rect.y,
+        collider.rect.w,
+        collider.rect.h,
+      };
+
+      for (auto bullet: bulletView) {
+        auto [pposition, pcollider] = bulletView.get<PositionComponent, BoxColliderComponent>(bullet);
+        auto& active = powerUpView.get<ActiveComponent>(enemy);
+
+        SDL_Rect bulletRect = {
+          pposition.x + pcollider.rect.x,
+          pposition.y + pcollider.rect.y,
+          pcollider.rect.w,
+          pcollider.rect.h,
+        };
+
+        if (SDL_HasIntersection(&powerUpRect, &bulletRect)) {
+          SDL_Log("BEEP");
+          active.active = false;
           collider.collisionType = CollisionType::TRIGGER;
         }
       }
     }
   }
+
 };
 
 
@@ -102,7 +149,7 @@ public:
       auto& collider = playerView.get<BoxColliderComponent>(player);
 
       if (collider.collisionType == CollisionType::TRIGGER && !collider.isTriggered) {
-        std::cout << "player collider with power up" << std::endl;
+
         collider.isTriggered = true;
       }
     }
@@ -186,15 +233,18 @@ public:
 class PlayerWallCollisionSystem : public UpdateSystem {
 public:
   void run (float dT) override {
-    auto playerView = scene->r.view<PlayerComponent, BoxColliderComponent, VelocityComponent>();
+    auto playerView = scene->r.view<PlayerComponent, BoxColliderComponent, VelocityComponent, GravityComponent>();
 
     for (auto player : playerView) {
       auto& collider = playerView.get<BoxColliderComponent>(player);
       auto& velocity = playerView.get<VelocityComponent>(player);
+      auto& gravity = playerView.get<GravityComponent>(player);
 
       if (collider.collisionType == CollisionType::WALL) {
+        SDL_Log(":)");
         velocity.x = 0;
         velocity.y = 0;
+        gravity.gravity = 0;
       }
     }
   }

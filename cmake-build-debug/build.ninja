@@ -47,40 +47,40 @@ cmake_ninja_workdir = D$:/Temp/Game/cmake-build-debug/
 #############################################
 # Order-only phony target for Game
 
-build cmake_object_order_depends_target_Game: phony || CMakeFiles/Game.dir
+build cmake_object_order_depends_target_Game: phony || box2d-3.0.0/extern/simde/simde cmake_object_order_depends_target_box2d
 
 build CMakeFiles/Game.dir/main.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/main.cpp || cmake_object_order_depends_target_Game
   DEP_FILE = CMakeFiles\Game.dir\main.cpp.obj.d
   FLAGS = -O0 -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src
   OBJECT_DIR = CMakeFiles\Game.dir
   OBJECT_FILE_DIR = CMakeFiles\Game.dir
 
 build CMakeFiles/Game.dir/Scene/Engine/Scene.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/Scene/Engine/Scene.cpp || cmake_object_order_depends_target_Game
   DEP_FILE = CMakeFiles\Game.dir\Scene\Engine\Scene.cpp.obj.d
   FLAGS = -O0 -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src
   OBJECT_DIR = CMakeFiles\Game.dir
   OBJECT_FILE_DIR = CMakeFiles\Game.dir\Scene\Engine
 
 build CMakeFiles/Game.dir/Scene/Engine/Game.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/Scene/Engine/Game.cpp || cmake_object_order_depends_target_Game
   DEP_FILE = CMakeFiles\Game.dir\Scene\Engine\Game.cpp.obj.d
   FLAGS = -O0 -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src
   OBJECT_DIR = CMakeFiles\Game.dir
   OBJECT_FILE_DIR = CMakeFiles\Game.dir\Scene\Engine
 
 build CMakeFiles/Game.dir/Scene/Engine/Graphics/Texture.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/Scene/Engine/Graphics/Texture.cpp || cmake_object_order_depends_target_Game
   DEP_FILE = CMakeFiles\Game.dir\Scene\Engine\Graphics\Texture.cpp.obj.d
   FLAGS = -O0 -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src
   OBJECT_DIR = CMakeFiles\Game.dir
   OBJECT_FILE_DIR = CMakeFiles\Game.dir\Scene\Engine\Graphics
 
 build CMakeFiles/Game.dir/Scene/Engine/Graphics/TextureManager.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:/Temp/Game/Scene/Engine/Graphics/TextureManager.cpp || cmake_object_order_depends_target_Game
   DEP_FILE = CMakeFiles\Game.dir\Scene\Engine\Graphics\TextureManager.cpp.obj.d
   FLAGS = -O0 -g -std=gnu++23 -fdiagnostics-color=always
-  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src
   OBJECT_DIR = CMakeFiles\Game.dir
   OBJECT_FILE_DIR = CMakeFiles\Game.dir\Scene\Engine\Graphics
 
@@ -92,9 +92,9 @@ build CMakeFiles/Game.dir/Scene/Engine/Graphics/TextureManager.cpp.obj: CXX_COMP
 #############################################
 # Link the executable Game.exe
 
-build Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug CMakeFiles/Game.dir/main.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Scene.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Game.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Graphics/Texture.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Graphics/TextureManager.cpp.obj | D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2main.a D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2.dll.a
+build Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug CMakeFiles/Game.dir/main.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Scene.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Game.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Graphics/Texture.cpp.obj CMakeFiles/Game.dir/Scene/Engine/Graphics/TextureManager.cpp.obj | D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2main.a D$:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2.dll.a D$:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/lib/libSDL2_mixer.dll.a box2d-3.0.0/src/libbox2d.a || box2d-3.0.0/extern/simde/simde box2d-3.0.0/src/libbox2d.a
   FLAGS = -O0 -g
-  LINK_LIBRARIES = -lmingw32  -mwindows  D:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2main.a  D:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2.dll.a  -lmingw32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lmingw32  -mwindows  D:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2main.a  D:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/lib/libSDL2.dll.a  D:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/lib/libSDL2_mixer.dll.a  box2d-3.0.0/src/libbox2d.a  -lmingw32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Game.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -125,10 +125,544 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/Temp/Game/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build box2d-3.0.0/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0 && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build box2d-3.0.0/edit_cache: phony box2d-3.0.0/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build box2d-3.0.0/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0 && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Temp\Game -BD:\Temp\Game\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/rebuild_cache: phony box2d-3.0.0/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build box2d-3.0.0/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build box2d-3.0.0/CMakeFiles/install.util: CUSTOM_COMMAND box2d-3.0.0/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0 && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/install: phony box2d-3.0.0/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build box2d-3.0.0/CMakeFiles/install/local.util: CUSTOM_COMMAND box2d-3.0.0/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0 && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/install/local: phony box2d-3.0.0/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build box2d-3.0.0/CMakeFiles/install/strip.util: CUSTOM_COMMAND box2d-3.0.0/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0 && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/install/strip: phony box2d-3.0.0/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/Temp/Game/box2d-3.0.0/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for simde
+
+build box2d-3.0.0/extern/simde/simde: phony
+
+
+#############################################
+# Utility command for edit_cache
+
+build box2d-3.0.0/extern/simde/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\extern\simde && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build box2d-3.0.0/extern/simde/edit_cache: phony box2d-3.0.0/extern/simde/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build box2d-3.0.0/extern/simde/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\extern\simde && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Temp\Game -BD:\Temp\Game\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/extern/simde/rebuild_cache: phony box2d-3.0.0/extern/simde/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build box2d-3.0.0/extern/simde/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build box2d-3.0.0/extern/simde/CMakeFiles/install.util: CUSTOM_COMMAND box2d-3.0.0/extern/simde/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\extern\simde && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/extern/simde/install: phony box2d-3.0.0/extern/simde/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build box2d-3.0.0/extern/simde/CMakeFiles/install/local.util: CUSTOM_COMMAND box2d-3.0.0/extern/simde/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\extern\simde && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/extern/simde/install/local: phony box2d-3.0.0/extern/simde/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build box2d-3.0.0/extern/simde/CMakeFiles/install/strip.util: CUSTOM_COMMAND box2d-3.0.0/extern/simde/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\extern\simde && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/extern/simde/install/strip: phony box2d-3.0.0/extern/simde/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/Temp/Game/box2d-3.0.0/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target box2d
+
+
+#############################################
+# Order-only phony target for box2d
+
+build cmake_object_order_depends_target_box2d: phony || box2d-3.0.0/extern/simde/simde
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/aabb.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/aabb.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\aabb.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/allocate.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/allocate.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\allocate.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/array.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/array.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\array.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/bitset.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/bitset.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\bitset.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/block_array.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/block_array.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\block_array.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/body.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/body.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\body.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/broad_phase.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/broad_phase.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\broad_phase.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/constraint_graph.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/constraint_graph.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\constraint_graph.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/contact.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/contact.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\contact.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/contact_solver.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/contact_solver.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\contact_solver.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/core.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/core.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\core.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/distance.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/distance.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\distance.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/distance_joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/distance_joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\distance_joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/dynamic_tree.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/dynamic_tree.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\dynamic_tree.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/geometry.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/geometry.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\geometry.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/hull.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/hull.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\hull.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/id_pool.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/id_pool.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\id_pool.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/island.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/island.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\island.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/manifold.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/manifold.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\manifold.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/math_functions.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/math_functions.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\math_functions.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/motor_joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/motor_joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\motor_joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/mouse_joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/mouse_joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\mouse_joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/prismatic_joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/prismatic_joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\prismatic_joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/revolute_joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/revolute_joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\revolute_joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/shape.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/shape.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\shape.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/solver.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/solver.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\solver.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/solver_set.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/solver_set.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\solver_set.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/stack_allocator.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/stack_allocator.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\stack_allocator.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/table.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/table.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\table.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/timer.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/timer.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\timer.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/types.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/types.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\types.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/weld_joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/weld_joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\weld_joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/wheel_joint.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/wheel_joint.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\wheel_joint.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+build box2d-3.0.0/src/CMakeFiles/box2d.dir/world.c.obj: C_COMPILER__box2d_unscanned_Debug D$:/Temp/Game/box2d-3.0.0/src/world.c || cmake_object_order_depends_target_box2d
+  DEP_FILE = box2d-3.0.0\src\CMakeFiles\box2d.dir\world.c.obj.d
+  FLAGS = -g -std=gnu17 -fvisibility=hidden -fdiagnostics-color=always -mavx2 -Werror
+  INCLUDES = -ID:/Temp/Game/path/to/print/header -ID:/Temp/Game -ID:/Temp/Game/SDL2-2.30.5/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/SDL2_mixer-2.8.0/x86_64-w64-mingw32/include/SDL2 -ID:/Temp/Game/box2d-3.0.0/include -ID:/Temp/Game/box2d-3.0.0/src/../include -ID:/Temp/Game/cmake-build-debug/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/src -ID:/Temp/Game/box2d-3.0.0/extern/simde
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  OBJECT_FILE_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target box2d
+
+
+#############################################
+# Link the static library box2d-3.0.0\src\libbox2d.a
+
+build box2d-3.0.0/src/libbox2d.a: C_STATIC_LIBRARY_LINKER__box2d_Debug box2d-3.0.0/src/CMakeFiles/box2d.dir/aabb.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/allocate.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/array.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/bitset.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/block_array.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/body.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/broad_phase.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/constraint_graph.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/contact.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/contact_solver.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/core.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/distance.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/distance_joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/dynamic_tree.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/geometry.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/hull.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/id_pool.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/island.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/manifold.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/math_functions.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/motor_joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/mouse_joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/prismatic_joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/revolute_joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/shape.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/solver.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/solver_set.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/stack_allocator.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/table.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/timer.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/types.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/weld_joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/wheel_joint.c.obj box2d-3.0.0/src/CMakeFiles/box2d.dir/world.c.obj || box2d-3.0.0/extern/simde/simde
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = box2d-3.0.0\src\CMakeFiles\box2d.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = box2d-3.0.0\src\libbox2d.a
+  TARGET_PDB = box2d.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build box2d-3.0.0/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\src && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build box2d-3.0.0/src/edit_cache: phony box2d-3.0.0/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build box2d-3.0.0/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\src && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Temp\Game -BD:\Temp\Game\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/src/rebuild_cache: phony box2d-3.0.0/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build box2d-3.0.0/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build box2d-3.0.0/src/CMakeFiles/install.util: CUSTOM_COMMAND box2d-3.0.0/src/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\src && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/src/install: phony box2d-3.0.0/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build box2d-3.0.0/src/CMakeFiles/install/local.util: CUSTOM_COMMAND box2d-3.0.0/src/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\src && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/src/install/local: phony box2d-3.0.0/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build box2d-3.0.0/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND box2d-3.0.0/src/all
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D D:\Temp\Game\cmake-build-debug\box2d-3.0.0\src && "D:\Program Files\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build box2d-3.0.0/src/install/strip: phony box2d-3.0.0/src/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
 build Game: phony Game.exe
+
+build box2d: phony box2d-3.0.0/src/libbox2d.a
+
+build libbox2d.a: phony box2d-3.0.0/src/libbox2d.a
+
+build simde: phony box2d-3.0.0/extern/simde/simde
 
 # =============================================================================
 # Folder targets.
@@ -138,7 +672,28 @@ build Game: phony Game.exe
 #############################################
 # Folder: D:/Temp/Game/cmake-build-debug
 
-build all: phony Game.exe
+build all: phony Game.exe box2d-3.0.0/all
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Temp/Game/cmake-build-debug/box2d-3.0.0
+
+build box2d-3.0.0/all: phony box2d-3.0.0/extern/simde/all box2d-3.0.0/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Temp/Game/cmake-build-debug/box2d-3.0.0/extern/simde
+
+build box2d-3.0.0/extern/simde/all: phony box2d-3.0.0/extern/simde/simde
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Temp/Game/cmake-build-debug/box2d-3.0.0/src
+
+build box2d-3.0.0/src/all: phony box2d-3.0.0/src/libbox2d.a
 
 # =============================================================================
 # Built-in targets
@@ -147,14 +702,14 @@ build all: phony Game.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake D$:/Temp/Game/CMakeLists.txt D$:/Temp/Game/cmake/modules/FindSDL2.cmake
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FetchContent.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake D$:/Temp/Game/CMakeLists.txt D$:/Temp/Game/box2d-3.0.0/CMakeLists.txt D$:/Temp/Game/box2d-3.0.0/extern/simde/CMakeLists.txt D$:/Temp/Game/box2d-3.0.0/src/CMakeLists.txt D$:/Temp/Game/cmake/modules/FindSDL2.cmake D$:/Temp/Game/cmake/modules/FindSDL2_Mixer.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake D$:/Temp/Game/CMakeLists.txt D$:/Temp/Game/cmake/modules/FindSDL2.cmake: phony
+build CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FetchContent.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake D$:/Program$ Files/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake D$:/Temp/Game/CMakeLists.txt D$:/Temp/Game/box2d-3.0.0/CMakeLists.txt D$:/Temp/Game/box2d-3.0.0/extern/simde/CMakeLists.txt D$:/Temp/Game/box2d-3.0.0/src/CMakeLists.txt D$:/Temp/Game/cmake/modules/FindSDL2.cmake D$:/Temp/Game/cmake/modules/FindSDL2_Mixer.cmake: phony
 
 
 #############################################

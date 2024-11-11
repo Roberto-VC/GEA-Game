@@ -10,10 +10,14 @@ struct PositionComponent {
   int y;
 };
 
+struct ActiveComponent {
+  bool active;
+};
+
 struct VelocityComponent {
   int speed;
-  int x = 0;
-  int y = 0;
+  float x = 0;
+  float y = 0;
 };
 
 

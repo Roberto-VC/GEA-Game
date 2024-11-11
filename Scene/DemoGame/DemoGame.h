@@ -12,6 +12,7 @@
 #include "Scene/DemoGame/Tilemap.h"
 #include "Scene/DemoGame/Player.h"
 #include "Scene/DemoGame/Colliders.h"
+#include "Scene/DemoGame/Sound.h"
 #include <SDL_render.h>
 
 
@@ -27,6 +28,7 @@ struct ParallaxComponent {
 struct Moving {
 
 };
+
 
 
 bool checkCollision(const PositionComponent pos1, const SpriteComponent spr1,
@@ -54,30 +56,103 @@ void handleCollision(const PositionComponent& ballpos, const SpriteComponent& ba
   }
 }
 
+class BulletSetupSystem : public SetupSystem {
+public:
+  void run() override {
+    // Define a template for the bullet, but do not spawn it immediately.
+    Entity* bulletPrefab = scene->createEntity("BULLET_TEMPLATE", 0, 0);
+    bulletPrefab->addComponent<BulletComponent>(); // Add Bullet Component
+    bulletPrefab->addComponent<TextureComponent>("../Assets/Sprites/Bullet.bmp");
+    bulletPrefab->addComponent<SpriteComponent>("../Assets/Sprites/Bullet.bmp", 16, 16, 1, 1, 1000);
+    bulletPrefab->addComponent<BoxColliderComponent>(SDL_Rect{0, 0, 16, 16}, SDL_Color{255, 255, 0});
+    bulletPrefab->addComponent<VelocityComponent>(0, 0);  // Initial velocity (will be set later)
+    bulletPrefab->addComponent<LayerComponent>(1);
+
+
+  }
+};
+
+class BulletRendererSystem : public RenderSystem {
+  void run(SDL_Renderer* renderer) {
+  }
+};
+
 
 class PlayerMovement : public EventSystem {
  void run(SDL_Event e) {
    const Uint8* ks = SDL_GetKeyboardState(NULL);
-   auto view = scene->r.view<PlayerComponent, PositionComponent, SpriteComponent, VelocityComponent>();
+   auto view = scene->r.view<PlayerComponent, PositionComponent, SpriteComponent, VelocityComponent,GravityComponent>();
    for (auto e1 : view) {
+     auto& pos = view.get<PositionComponent>(e1);
      auto& vel = view.get<VelocityComponent>(e1);
+     auto& grav = view.get<GravityComponent>(e1);
      vel.x = 0;
-     vel.y = 0;
      if (ks[SDL_SCANCODE_A]) {
        vel.x += -350;  // Moving left
      }
      if (ks[SDL_SCANCODE_D]) {
        vel.x += 350;   // Moving right
      }
-     if (ks[SDL_SCANCODE_S]) {
-       vel.y += 350;   // Moving right
-     }
      if (ks[SDL_SCANCODE_W]) {
-       vel.y += -350;  // Moving left
+       vel.y = -75;   // Moving right
+       grav.gravity = 9.81f * 5.0;
+       auto audioView = scene->r.view<AudioComponent>();
+       for (auto audioEntity : audioView) {
+         auto& audio = audioView.get<AudioComponent>(audioEntity);
+         audio.triggerPlay = true; // Set the trigger to play audio
+         SDL_Log("Hi!");
+       }
+     }
+     if (ks[SDL_SCANCODE_SPACE]) {
+       createBullet(pos.x, pos.y); // Create bullet at the player's position
      }
    }
  }
 
+private:
+  void createBullet(int playerX, int playerY) {
+    // Get the bullet template
+    auto bulletTemplate = scene->r.view<BulletComponent>().front(); // Assuming you have only one bullet prefab
+    auto& templatePos = scene->r.get<PositionComponent>(bulletTemplate);
+
+    // Create the new bullet entity
+    Entity* bullet = scene->createEntity("BULLET", playerX, playerY);
+
+    // Copy components from the template to the new bullet
+    bullet->addComponent<BulletComponent>(); // Add Bullet Component
+    bullet->addComponent<TextureComponent>("../Assets/Sprites/Bullet.bmp");
+    bullet->addComponent<SpriteComponent>("../Assets/Sprites/Bullet.bmp", 16, 16, 1, 1, 1000);
+    bullet->addComponent<BoxColliderComponent>(SDL_Rect{0, 0, 16, 16}, SDL_Color{255, 255, 0});
+    bullet->addComponent<VelocityComponent>(500, 0);  // Set velocity to the right
+    bullet->addComponent<LayerComponent>(1);
+  }
+
+
+};
+
+
+
+class BulletUpdateSystem : public UpdateSystem {
+public:
+  void run(float dt) override {
+    auto view = scene->r.view<PositionComponent, VelocityComponent>();
+
+    for (auto e : view) {
+      auto& pos = view.get<PositionComponent>(e);
+      auto& vel = view.get<VelocityComponent>(e);
+
+      // Update position based on velocity
+      pos.x += vel.x * dt;
+      pos.y += vel.y * dt;
+
+      // Handle out of bounds or collision logic (optional)
+      if (pos.x < 0 || pos.x > 1024 || pos.y < 0 || pos.y > 720) {
+        scene->r.remove<PositionComponent>(e); // Remove the bullet entity if out of bounds
+        scene->r.remove<VelocityComponent>(e);
+        scene->r.remove<SpriteComponent>(e); // Remove associated components
+      }
+    }
+  }
 };
 
 class BallCollision : public UpdateSystem {
@@ -115,32 +190,52 @@ class BallCollision : public UpdateSystem {
   }
 };
 
+class GravitySystem : public UpdateSystem {
+public:
+  void run(float dt) override {
+    auto view = scene->r.view<PositionComponent, VelocityComponent, GravityComponent>();
+
+    for (auto e : view) {
+      auto& pos = view.get<PositionComponent>(e);
+      auto& vel = view.get<VelocityComponent>(e);
+      auto& gravity = view.get<GravityComponent>(e);
+
+      // Apply gravity
+      vel.y += gravity.gravity * dt; // Update vertical velocity
+      pos.y += vel.y * dt; // Update position based on velocity
+    }
+  }
+};
+
+
 class SquareSpawnSetupSystem : public SetupSystem {
   void run() {
-Entity* square = scene->createEntity("SQUARE", 10, 10);
+Entity* square = scene->createEntity("SQUARE", 10, 400);
     square->addComponent<PlayerComponent>();
     square->addComponent<VelocityComponent>(300);
-    square->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Human.bmp");
-    square->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Human.bmp", 16, 16, 7, 8, 1000);
+    square->addComponent<GravityComponent>(9.81f);
+    square->addComponent<TextureComponent>("../Assets/Sprites/Human.bmp");
+    square->addComponent<SpriteComponent>("../Assets/Sprites/Human.bmp", 16, 16, 7, 8, 1000);
     square->addComponent<BoxColliderComponent>(SDL_Rect{25, 0, 60, 100}, SDL_Color{255, 0, 0});
     square->addComponent<LayerComponent>(1);
 
-    Entity* square2 = scene->createEntity("SQUARE", 10, 10);
-    square2->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp");
-    square2->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp", 16, 16, 5, 8, 1000);
+    Entity* square2 = scene->createEntity("SQUARE", 200, 300);
+    square2->addComponent<PowerUpComponent>();
+    square2->addComponent<TextureComponent>("../Assets/Sprites/Alien.bmp");
+    square2->addComponent<SpriteComponent>("../Assets/Sprites/Alien.bmp", 16, 16, 5, 8, 1000);
+    square2->addComponent<BoxColliderComponent>(SDL_Rect{0, 0, 80, 80}, SDL_Color{0, 255, 0});
+    square2->addComponent<EnemyComponent>();
     square2->addComponent<LayerComponent>(1);
 
-    Entity* square3 = scene->createEntity("SQUARE", 60, 10);
-    square3->addComponent<TextureComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp");
-    square3->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Sprites/Alien.bmp", 16, 16, 5, 8, 1000);
+    Entity* square3 = scene->createEntity("SQUARE", 100, 400);
+    square3->addComponent<PowerUpComponent>();
+    square3->addComponent<VelocityComponent>(0, 0);
+    square3->addComponent<TextureComponent>("../Assets/Sprites/Alien.bmp");
+    square3->addComponent<SpriteComponent>("../Assets/Sprites/Alien.bmp", 16, 16, 5, 8, 1000);
+    square3->addComponent<BoxColliderComponent>(SDL_Rect{0, 0, 80, 80}, SDL_Color{0, 255, 0});
+    square3->addComponent<EnemyComponent>();
     square3->addComponent<LayerComponent>(1);
 
-    Entity* face = scene->createEntity("face", 200, 200);
-    face->addComponent<PowerUpComponent>();
-    face->addComponent<TextureComponent>("D:/Temp/Game/Assets/Backgrounds/face.bmp");
-    face->addComponent<SpriteComponent>("D:/Temp/Game/Assets/Backgrounds/face.bmp", 8, 8, 10, 0, 0);
-    face->addComponent<BoxColliderComponent>(SDL_Rect{0, 0, 80, 80}, SDL_Color{0, 255, 0});
-    face->addComponent<LayerComponent>(1);
   }
 };
 
@@ -231,7 +326,42 @@ class RemoveSystem : public UpdateSystem {
     }
   }
 };
+class EnemyMovementSystem : public UpdateSystem {
+public:
+  void run(float dt) override {
+    auto view = scene->r.view<EnemyComponent, PositionComponent, VelocityComponent>();
 
+    for (auto e : view) {
+      auto& pos = view.get<PositionComponent>(e);
+      auto& vel = view.get<VelocityComponent>(e);
+
+      // Move the enemy to the right at a constant speed
+      pos.x += 1;
+      if (pos.x > 768) { // Assuming screen width of 800
+        pos.x = 0; // Reset to left side of the screen
+      }
+
+      // Optional: Add boundary checking to reset position or reverse direction
+    }
+  }
+};
+
+class BulletMovementSystem : public UpdateSystem {
+public:
+  void run(float dt) override {
+    auto view = scene->r.view<BulletComponent, PositionComponent, VelocityComponent>();
+
+    for (auto e : view) {
+      auto& pos = view.get<PositionComponent>(e);
+      auto& vel = view.get<VelocityComponent>(e);
+
+      // Move the enemy to the right at a constant speed
+      pos.x += 10;
+
+      // Optional: Add boundary checking to reset position or reverse direction
+    }
+  }
+};
 
 
 
@@ -252,26 +382,45 @@ public:
   void setup() {
     sampleScene = new Scene("SAMPLE SCENE", r, renderer);
     addSetupSystem<BackgroundSetupSystem>(sampleScene);
+    addSetupSystem<AudioSetupSystem>(sampleScene);
     addSetupSystem<SquareSpawnSetupSystem>(sampleScene);
+    addSetupSystem<BulletSetupSystem>(sampleScene);
     addSetupSystem<TilemapSetupSystem>(sampleScene);
     addSetupSystem<TextureSetupSystem>(sampleScene);
     addSetupSystem<AutoTilingSetupSystem>(sampleScene);
     addSetupSystem<TilemapEntitySetupSystem>(sampleScene);
 
+
+
+
+
     addRenderSystem<BackgroundRenderSystem>(sampleScene);
-    addRenderSystem<SpriteRenderSystem>(sampleScene);
     addRenderSystem<TilemapRenderSystem>(sampleScene);
+    addRenderSystem<SpriteRenderSystem>(sampleScene);
     addRenderSystem<ColliderRenderSystem>(sampleScene);
+    addUpdateSystem<AudioSystem>(sampleScene);
     addUpdateSystem<ColliderResetSystem>(sampleScene);
     addUpdateSystem<PlayerPowerUpCollisionDetectionSystem>(sampleScene);
     addUpdateSystem<PlayerPowerUpCollisionSystem>(sampleScene);
     addUpdateSystem<PlayerTileCollisionDetectionSystem>(sampleScene);
     addUpdateSystem<PlayerWallCollisionSystem>(sampleScene);
+    addUpdateSystem<GravitySystem>(sampleScene);
     addUpdateSystem<MovementSystem>(sampleScene);
     addUpdateSystem<SpriteMovementSystem>(sampleScene);
     addUpdateSystem<SpriteAnimationSystem>(sampleScene);
-    //addUpdateSystem<WallHitSystem>(sampleScene);
+    addUpdateSystem<BulletMovementSystem>(sampleScene);
+    addUpdateSystem<EnemyMovementSystem>(sampleScene);
+
     addEventSystem<PlayerMovement>(sampleScene);
+
+
+
+
+
+    //addUpdateSystem<WallHitSystem>(sampleScene);
+    //addUpdateSystem<PositionUpdateSystem>(sampleScene);
+    //addUpdateSystem<PhysicsSimulationSytem>(sampleScene);
+    //addEventSystem<PlayerInputSystem>(sampleScene);
     //addUpdateSystem<RemoveSystem>(sampleScene);
     //addUpdateSystem<BallCollision>(sampleScene);
 
