@@ -21,6 +21,7 @@ public:
 
     Entity* createEntity(const std::string&);
     Entity* createEntity(const std::string&,int,int);
+    Entity* createEntity(const std::string&,int,int, bool);
 
     void setup();
     void update(float dT);

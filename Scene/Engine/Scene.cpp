@@ -30,6 +30,15 @@ Entity* Scene::createEntity(const std::string& n, int x, int y) {
     return entity;
 }
 
+Entity* Scene::createEntity(const std::string& n, int x, int y, bool active) {
+    Entity* entity = new Entity(r.create(), this);
+    entity->addComponent<NameComponent>(n);
+    entity->addComponent<PositionComponent>(x, y);
+    entity->addComponent<ActiveComponent>(active);
+    return entity;
+}
+
+
 void Scene::setup() {
     for (auto sys: setupSystems) {
         sys->run();

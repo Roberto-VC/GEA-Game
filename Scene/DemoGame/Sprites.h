@@ -99,7 +99,6 @@ class SpriteRenderSystem : public RenderSystem {
       auto pos = view.get<PositionComponent>(e);
       auto spr = view.get<SpriteComponent>(e);
       auto act = view.get<ActiveComponent>(e);
-      SDL_Log("%s", spr.filename.c_str());
 
       if (act.active == true){
       Texture* texture = TextureManager::GetTexture(spr.filename);
@@ -111,7 +110,6 @@ class SpriteRenderSystem : public RenderSystem {
       };
 
       texture->render(scene->renderer, pos.x, pos.y, spr.width * spr.scale, spr.height * spr.scale, &clip);
-      SDL_Log("WHY?");
     }else {
       pos.x = -100;
       pos.y = -100;

@@ -236,6 +236,19 @@ Entity* square = scene->createEntity("SQUARE", 10, 400);
     square3->addComponent<EnemyComponent>();
     square3->addComponent<LayerComponent>(1);
 
+    Entity* win = scene->createEntity("SQUARE", 400, 400, false);
+    win->addComponent<WinComponent>();
+    win->addComponent<TextureComponent>("../Assets/Sprites/Win.bmp");
+    win->addComponent<SpriteComponent>("../Assets/Sprites/Win.bmp", 16, 16, 10, 8, 1000);
+    win->addComponent<LayerComponent>(1);
+
+    Entity* lose = scene->createEntity("SQUARE", 400, 400, false);
+    lose->addComponent<LoseComponent>();
+    lose->addComponent<TextureComponent>("../Assets/Sprites/Lose.bmp");
+    lose->addComponent<SpriteComponent>("../Assets/Sprites/Lose.bmp", 16, 16, 10, 8, 1000);
+    lose->addComponent<LayerComponent>(1);
+
+
   }
 };
 

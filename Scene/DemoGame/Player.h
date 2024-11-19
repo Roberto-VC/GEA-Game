@@ -9,3 +9,9 @@ struct EnemyComponent {
 
 struct BulletComponent {
 };
+
+struct WinComponent {
+};
+
+struct LoseComponent {
+};

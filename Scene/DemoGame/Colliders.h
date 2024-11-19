@@ -73,6 +73,9 @@ public:
     auto powerUpView = scene->r.view<EnemyComponent, BoxColliderComponent, PositionComponent, ActiveComponent>();
     auto bulletView = scene->r.view<BulletComponent, BoxColliderComponent, PositionComponent, ActiveComponent>();
 
+    bool allPowerUpsInactive = true;
+    bool playerInactive = true;
+
     for (auto player : playerView) {
       auto position = playerView.get<PositionComponent>(player);
       auto& collider = playerView.get<BoxColliderComponent>(player);
@@ -102,6 +105,14 @@ public:
           active.active = false;
           collider.collisionType = CollisionType::TRIGGER;
         }
+
+        auto loseView = scene->r.view<LoseComponent, ActiveComponent>();
+        for (auto lose: loseView) {
+          if (!active.active) {
+            auto& active3 = playerView.get<ActiveComponent>(lose);
+            active3.active = true;
+          }
+        }
       }
     }
 
@@ -129,12 +140,24 @@ public:
         };
 
         if (SDL_HasIntersection(&powerUpRect, &bulletRect)) {
-          SDL_Log("BEEP");
           active.active = false;
           collider.collisionType = CollisionType::TRIGGER;
         }
+        if (active.active) {
+          allPowerUpsInactive = false;
+        }
       }
     }
+
+    auto winView = scene->r.view<WinComponent, ActiveComponent>();
+    for (auto win: winView) {
+      if (allPowerUpsInactive) {
+        auto& active = playerView.get<ActiveComponent>(win);
+        active.active = true;
+      }
+    }
+
+
   }
 
 };
@@ -241,7 +264,6 @@ public:
       auto& gravity = playerView.get<GravityComponent>(player);
 
       if (collider.collisionType == CollisionType::WALL) {
-        SDL_Log(":)");
         velocity.x = 0;
         velocity.y = 0;
         gravity.gravity = 0;
