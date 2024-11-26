@@ -82,6 +82,7 @@ private:
 
     // Start playback (only if not already playing)
     SDL_PauseAudioDevice(audioDevice, 0);
+    SDL_Delay(10);
 
     // Free the WAV buffer after queuing
     SDL_FreeWAV(wavBuffer);
