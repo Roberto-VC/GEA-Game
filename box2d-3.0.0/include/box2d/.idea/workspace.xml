@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da51e482-2e50-4bdf-a16b-19ebc3d184fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.clang-format" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.github/FUNDING.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.github/issue_template.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.github/pull_request_template.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x/joint_grid.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x/large_pyramid.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x/many_pyramids.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x/smash.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x/tumbler.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x_sse2/joint_grid.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x_sse2/large_pyramid.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x_sse2/many_pyramids.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x_sse2/smash.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/amd7950x_sse2/tumbler.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/benchmark_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/joint_grid.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/large_pyramid.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/m2air/joint_grid.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/m2air/large_pyramid.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/m2air/many_pyramids.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/m2air/smash.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/m2air/tumbler.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/many_pyramids.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/smash.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../benchmark/tumbler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../build.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../deploy_docs.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/FAQ.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/collision.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/extra.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/foundation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/hello.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/capsule.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/captured_toi.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/center_of_mass.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/chain_loop_inwards.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/chain_loop_outwards.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/chain_shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/convex_concave.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/distance.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/distance_joint.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/ghost_collision.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/ghost_vertices.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/manifolds.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/missed_toi.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/overlap_test.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/prismatic_joint.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/raycast.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/revolute_joint.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/samples.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/self_intersect.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/skin_collision.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/tunneling1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/tunneling2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/wheel_joint.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/images/winding.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/loose_ends.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/migration.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/overview.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/reading.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/samples.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../docs/simulation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/glad/include/KHR/khrplatform.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/glad/include/glad/glad.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/glad/src/glad.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/jsmn/jsmn.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/check.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/debug-trap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/hedley.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-aes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-align.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-arch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-common.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-constify.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-detect-clang.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-diagnostic.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-f16.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-features.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/simde-math.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/aes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/avx.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/avx2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/f16c.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/fma.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/mmx.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/sse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/sse2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/sse3.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/sse4.1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/sse4.2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../extern/simde/x86/ssse3.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/box2d.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collision.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/id.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/math_functions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/car.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/car.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/background.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/background.vs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/circle.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/circle.vs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/droid_sans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/solid_capsule.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/solid_capsule.vs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/solid_circle.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/solid_circle.vs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/solid_polygon.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/data/solid_polygon.vs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/donut.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/donut.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/doohickey.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/doohickey.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/draw.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/draw.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/human.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/human.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_benchmark.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_bodies.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_collision.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_continuous.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_events.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_geometry.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_joints.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_robustness.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_shapes.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_stacking.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/sample_world.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/settings.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/settings.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/shader.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../samples/shader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/aabb.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/aabb.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/allocate.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/allocate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/array.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/array.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/bitset.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/bitset.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/block_array.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/block_array.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/body.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/body.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/box2d.natvis" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/broad_phase.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/broad_phase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/constraint_graph.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/constraint_graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/contact.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/contact.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/contact_solver.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/contact_solver.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/core.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/core.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/ctz.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/distance.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/distance_joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/dynamic_tree.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/geometry.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/hull.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/id_pool.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/id_pool.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/island.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/island.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/joint.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/manifold.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/math_functions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/motor_joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/mouse_joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/prismatic_joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/revolute_joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/shape.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/shape.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/solver.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/solver.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/solver_set.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/solver_set.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/stack_allocator.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/stack_allocator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/table.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/table.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/timer.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/types.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/weld_joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/wheel_joint.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/world.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/world.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_bitset.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_collision.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_determinism.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_distance.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_macros.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_math.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_shape.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_table.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/test_world.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../cmake/modules/FindBOX2D.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scene/DemoGame/DemoGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scene/DemoGame/DemoGame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/CMakeFiles/Game.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/CMakeFiles/Game.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/Game.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cmake-build-debug/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cmake-build-debug/compile_commands.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Roberto-VC&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Roberto-VC/GEA-Game.git&quot;,
+    &quot;accountId&quot;: &quot;d26d2032-95a8-4124-9859-badb6b1cd6f9&quot;
+  }
+}</component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.4" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2mxKJZPE8oaCK8UnbjoHL2Xp3Y3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Temp/Game",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da51e482-2e50-4bdf-a16b-19ebc3d184fd" name="Changes" comment="" />
+      <created>1728012716755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728012716755</updated>
+      <workItem from="1728012718292" duration="23000" />
+      <workItem from="1728013237426" duration="55000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

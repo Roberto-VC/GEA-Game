@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="33ff8ec5-e658-40b8-a312-e38ad98252d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Assets/Backgrounds/stars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphics/Texture.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphics/Texture.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphics/TextureManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graphics/TextureManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cmake/modules/FindSDL2_Image.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-01835fbca39307bf0ca6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/Game.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/Game.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/Game.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/compile_commands.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Roberto-VC&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Roberto-VC/GEA-Game.git&quot;,
+    &quot;accountId&quot;: &quot;d26d2032-95a8-4124-9859-badb6b1cd6f9&quot;
+  }
+}</component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.4" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2kDk4JptVxfjuqXmGwff4RaQxKF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Temp/Game&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33ff8ec5-e658-40b8-a312-e38ad98252d3" name="Changes" comment="" />
+      <created>1722825351775</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722825351775</updated>
+      <workItem from="1722825356588" duration="202000" />
+      <workItem from="1724620815298" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
